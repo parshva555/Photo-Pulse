@@ -1,3 +1,6 @@
+
+
+
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux/es/hooks/useSelector'
 import { CustomButton, EditProfile, FriendsCard, Loading, PostCard, ProfileCard, TextInput, TopBar } from '../components'
@@ -7,6 +10,7 @@ import { Link } from 'react-router-dom'
 import { BsFiletypeGif, BsPersonFillAdd } from 'react-icons/bs'
 import {BiImages, BiSolidVideo} from 'react-icons/bi'
 import { useForm } from 'react-hook-form'
+
 function Home() {
   const {user,edit} = useSelector(state => state.user)
   const [friendRequest,setFriendRequest] = useState(requests);
@@ -17,6 +21,7 @@ function Home() {
   const [errMsg, setErrMsg] = useState("")
   const {register,handleSubmit, formState:{errors}} = useForm();
   const handlePostSubmit = async(data) =>{}
+  
   return (
     <>
         <div className='home w-full px-0 lg:px-10 pb-20 2xl:px-40 bg-bgColor lg:rounded-lg h-screen overflow-hidden'>

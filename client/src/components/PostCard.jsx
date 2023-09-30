@@ -279,7 +279,6 @@ const PostCard = ({post, user, deletePost, likePost}) => {
                 )}
         </div>
       )}
-      <div></div>
     </div>
   )
 }

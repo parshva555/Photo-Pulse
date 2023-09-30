@@ -100,7 +100,7 @@ const Register= () => {
               register("cPassword",{
                 validate:(value) => {
                   const { password } = getValues();
-                  if(password!= value){
+                  if(password!== value){
                     return "Passwords do not match"
                   }
                 }
@@ -115,7 +115,7 @@ const Register= () => {
           {
             errMsg?.message && (
               <span className={`text-sm ${
-                errMsg?.status == "failed" ? "text-[#f64949fe]":"text-[#2ba150fe]"
+                errMsg?.status === "failed" ? "text-[#f64949fe]":"text-[#2ba150fe]"
               } mt-0.5`}>
                 {errMsg?.message}
               </span>

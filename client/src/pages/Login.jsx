@@ -72,7 +72,7 @@ const Login = () => {
           {
             errMsg?.message && (
               <span className={`text-sm ${
-                errMsg?.status == "failed" ? "text-[#f64949fe]":"text-[#2ba150fe]"
+                errMsg?.status === "failed" ? "text-[#f64949fe]":"text-[#2ba150fe]"
               } mt-0.5`}>
                 {errMsg?.message}
               </span>

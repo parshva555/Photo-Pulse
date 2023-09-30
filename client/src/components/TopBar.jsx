@@ -1,14 +1,16 @@
 import React from 'react'
+import { useState } from 'react'
 import { TbSocial } from 'react-icons/tb'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import CustomButton from './CustomButton'
 import TextInput from './TextInput'
 import { useForm } from 'react-hook-form'
-import { BsMoon, BsSunFill } from 'react-icons/bs'
+import { BsMoon, BsSunFill} from 'react-icons/bs'
 import {IoMdNotificationsOutline} from 'react-icons/io'
 import { SetTheme } from '../redux/theme'
 import { Logout } from '../redux/userSlice'
+const isMobile = window.innerWidth <= 768;
 
 const TopBar = () => {
     const {theme} = useSelector(state => state.theme)
@@ -22,6 +24,7 @@ const TopBar = () => {
     const handleSearch = async (data) =>{
 
     }
+  
 
 
   return (
@@ -34,23 +37,29 @@ const TopBar = () => {
             ShareFun
           </span>
         </Link>
-        <form className='hidden md:flex items-center justify-center' onSubmit={handleSubmit(handleSearch)}>
-            <TextInput
-            placeholder='Search...'
-            styles='w-[18rem] lg:w-[38rem] rounded-l-full py-3'
-            register={register("search")}
-            />
-            <CustomButton
-             title='Search'
-             type='submit'
-             containerStyles='bg-[#0444a4] text-white px-6 py-2.5 mt-2 rounded-r-full'
-             />
+        <div className='md:flex md:items-center'>
+        <form className={`flex items-center ${isMobile ? 'flex-col' : 'justify-center'
+            }`} onSubmit={handleSubmit(handleSearch)}>
 
-        </form>
+          <TextInput
+          placeholder='Search...'
+          styles={`w-[9rem] lg:w-[36rem] rounded-l-full py-1 ${
+            isMobile ? 'rounded-full' : 'rounded-l-full'
+          }`}
+          register={register("search")}
+          />
+          <CustomButton
+          title='Search'
+          type='submit'
+          containerStyles='bg-[#0444a4] text-white px-2 py-2.5 mt-2 rounded-r-full'
+          />
+
+</form>
+        </div>
         {/* Icons */}
         <div className='flex gap-4 items-center text-ascent-1 text-md md:text-xl'>
             <button onClick={()=>handleTheme()}>
-                {theme ? <BsMoon/> : <BsSunFill/>}
+                {theme==='dark'? <BsMoon/> : <BsSunFill/>}
             </button>
             <div className='hidden lg:flex'>
                 <IoMdNotificationsOutline/>

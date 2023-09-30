@@ -10,7 +10,7 @@ dotenv.config();
 const { AUTH_EMAIL, AUTH_PASSWORD, APP_URL } = process.env;
 
 let transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: "smtp.gmail.com",
     auth: {
         user: AUTH_EMAIL,
         pass: AUTH_PASSWORD,
@@ -44,11 +44,11 @@ export const sendVerificationEmail = async(user, res) => {
       
         <div style="margin-top: 20px;">
           <h5>Best Regards</h5>
-          <h5>Team harikesh</h5>
+          <h5>Team ShareFun </h5>
         </div>
       </div>
       `,
-    };
+    };  
 
     try {
         const hashedToken = await hashString(token);
