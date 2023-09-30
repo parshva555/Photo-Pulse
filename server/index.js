@@ -14,7 +14,7 @@ import path from "path"
 const __dirname = path.resolve(path.dirname(""))
 dotenv.config();
 const app = express();
-app.use(express.static(path.join(__dirname,"views/build")))
+app.use(express.static(path.join(__dirname,"view/build")))
 const PORT = process.env.PORT || 8800;
 dbConnection();
 
