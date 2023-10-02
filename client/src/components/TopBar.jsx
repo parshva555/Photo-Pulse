@@ -8,6 +8,7 @@ import TextInput from './TextInput'
 import { useForm } from 'react-hook-form'
 import { BsMoon, BsSunFill} from 'react-icons/bs'
 import {IoMdNotificationsOutline} from 'react-icons/io'
+import { ImCamera } from "react-icons/im";
 import { SetTheme } from '../redux/theme'
 import { Logout } from '../redux/userSlice'
 const isMobile = window.innerWidth <= 768;
@@ -30,11 +31,11 @@ const TopBar = () => {
   return (
     <div className='topbar  w-full flex items-center  justify-between py-3 md:py-6 px-4 bg-primary'>
         <Link to='/' className='flex gap-2 items-center'>
-        <div className='p-1 md:p-2 bg-[#065ad8] rounded text-white'>
-            <TbSocial/>
+        <div className='p-1 md:p-2 bg-[#e09200] rounded text-white'>
+            <ImCamera/>
           </div>
-          <span className='text-xl md:text-2xl text-[#065ad8]  font-semibold'>
-            ShareFun
+          <span className='text-xl md:text-2xl text-[#e09200]  font-semibold'>
+            Photo Pulse
           </span>
         </Link>
         <div className='md:flex md:items-center'>
@@ -43,7 +44,7 @@ const TopBar = () => {
 
           <TextInput
           placeholder='Search...'
-          styles={`w-[9rem] lg:w-[36rem] rounded-l-full py-1 ${
+          styles={`w-[8rem] lg:w-[36rem] rounded-l-full py-1 ${
             isMobile ? 'rounded-full' : 'rounded-l-full'
           }`}
           register={register("search")}
@@ -51,13 +52,13 @@ const TopBar = () => {
           <CustomButton
           title='Search'
           type='submit'
-          containerStyles='bg-[#0444a4] text-white px-2 py-2.5 mt-2 rounded-r-full'
+          containerStyles='bg-[#e09200] text-white px-1.5 py-2.5 mt-2 rounded-r-full'
           />
 
 </form>
         </div>
         {/* Icons */}
-        <div className='flex gap-4 items-center text-ascent-1 text-md md:text-xl'>
+        <div className='flex gap-2.5 items-center text-ascent-1 text-md md:text-xl'>
             <button onClick={()=>handleTheme()}>
                 {theme==='dark'? <BsMoon/> : <BsSunFill/>}
             </button>

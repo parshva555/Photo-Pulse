@@ -77,7 +77,7 @@ function Home() {
               { posting ? (
                 <Loading/>
               ) : (
-                <CustomButton type='submit' title='Post' containerStyles='bg-[#0444a4] text-white py-1 px-6 rounded-full fobt-semibold text-sm'/>
+                <CustomButton type='submit' title='Post' containerStyles='bg-[#e09200] text-white py-1 px-6 rounded-full fobt-semibold text-sm'/>
               )}
               </div>
 
@@ -125,10 +125,10 @@ function Home() {
 
                   <div className='flex gap-1'>
                      <CustomButton title='Accept'
-                     containerStyles='bg-[#0444a4] text-xs text-white px-1.5 py-1 rounded-full'
+                     containerStyles='bg-[#e09200] text-xs text-white px-1.5 py-1 rounded-full'
                      />
                     <CustomButton title='Deny'
-                     containerStyles='bg-[#666] text-xs text-white px-1.5 py-1 rounded-full'
+                     containerStyles='bg-[#fff] text-xs text-[#000] px-1.5 py-1 rounded-full  border border-[#000]'
                      />
                   </div>
                 </div>
@@ -163,7 +163,7 @@ function Home() {
                         // handleFriendRequest(friend?._id)
                           onClick={() => {}}
                         >
-                          <BsPersonFillAdd size={20} className='text-[#0f52b6]'/>
+                          <BsPersonFillAdd size={20} className='text-[#e09200]'/>
                         </button>
                       </div>
 

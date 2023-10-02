@@ -8,7 +8,7 @@ import { BgImage } from '../assets'
 import {BsShare, } from 'react-icons/bs'
 import {ImConnection} from 'react-icons/im'
 import {AiOutlineInteraction} from 'react-icons/ai'
-
+import { ImCamera } from "react-icons/im";
 const Login = () => {
   const {
     register,handleSubmit,formState: {errors}
@@ -25,19 +25,19 @@ const Login = () => {
 
   return (
     <div className='bg-bgColor w-full h-[100vh] flex items-center justify-center p-6'>
-      <div className='w-100 md:w-2/3 h-fit lg:h-full 2xl:h-5/6 py-8 lg:py-0 flex bg-primary rounded-xl overflow-hidden shadow-xl'>
+      <div className='w-100 md:w-2/3 h-fit lg:h-full 2xl:h-5/6 py-8 lg:py-0 flex bg-[#fff] rounded-xl overflow-hidden shadow-xl'>
       {/* LEFT */}
       <div className='w-full lg:w-1/2 h-full p-10 2xl:px-20 flex flex-col justify-center '>
         <div className='w-full flex gap-2 items-center mb-6'>
-          <div className='p-2 bg-[#065ad8] rounded text-white'>
-            <TbSocial/>
+          <div className='p-2 bg-[#e09200] rounded text-white'>
+            <ImCamera/>
           </div>
-          <span className='text-2xl text-[#065ad8]  font-semibold'>
-            ShareFun
+          <span className='text-2xl text-[#e09200]  font-semibold'>
+            Photo Pulse
           </span>
         </div>
         <p className='text-ascent-1 text-base font-semibold'>Log in to your Account</p>
-        <span className='text-sm mt-2 text-ascent-2'>Welcome Back</span>
+        <span className='text-sm mt-2 text-ascent-3'>Welcome Back</span>
         <form className='py-8 flex flex-col gap-5'
         onSubmit={handleSubmit(onSubmit)}>
           {/* For email */}
@@ -65,7 +65,7 @@ const Login = () => {
             error={ errors.password? errors.password.message : ""}
           />
           <Link
-          to="/reset-password" className='text-sm text-right text-blue font-semibold'>
+          to="/reset-password" className='text-sm text-right text-[#e09200] font-semibold'>
           Forgot Password?
           </Link>
 
@@ -81,7 +81,7 @@ const Login = () => {
 
           {
             isSubmitting ? <Loading/> : <CustomButton type="submit" 
-            containerStyles={`inline-flex justify-center rounded-md bg-blue px-8 py-3 text-sm font-meduium text-white outline-none`}
+            containerStyles={`inline-flex justify-center rounded-md bg-[#e09200] px-8 py-3 text-sm font-meduium text-white outline-none`}
               title='Login'
             />
           }
@@ -94,7 +94,7 @@ const Login = () => {
           </p>
       </div>
       {/* RIGHT */}
-      <div className='hidden w-1/2 h-full lg:flex flex-col items-center justify-center bg-blue'>
+      <div className='hidden w-1/2 h-full lg:flex flex-col items-center justify-center bg-[#e09200]'>
         <div className='relative w-full flex items-center justify-center'>
             <img src={BgImage} alt="Bg-Img" className='w-48 2xl:w-64 h-48 2xl:h-64 rounded-full object-cover'/>
             <div className='absolute flex items-center gap-1 bg-white right-10 top13 py-2 px-5 rounded-full'>

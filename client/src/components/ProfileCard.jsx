@@ -33,7 +33,7 @@ const ProfileCard = ({user}) => {
 
                 <div className=''>
                 {user?._id === data?._id ? (<LiaEditSolid size={22}
-                className='text-blue curson-pointer'
+                className='text-[#e09200] curson-pointer'
                 onClick={() => dispatch(UpdateProfile(true))}
                 />) : (
                     <button className='bg-[#0444a430] text-sm text-white p-1 rounded'
