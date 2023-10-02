@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
 import {useForm} from"react-hook-form"
 import {useDispatch} from "react-redux"
-import {TbSocial} from "react-icons/tb"
 import { CustomButton, Loading, TextInput } from '../components'
 import { BgImage } from '../assets'
 import {BsShare, } from 'react-icons/bs'
@@ -33,7 +32,7 @@ const Register= () => {
           <div className='p-2 bg-[#e09200] rounded text-white'>
             <ImCamera/>
           </div>
-          <span className='text-2xl text-[#e09200] ' font-semibold>
+          <span className='text-2xl text-[BsPersonFillAdd] ' font-semibold>
             Photo Pulse
           </span>
         </div>
