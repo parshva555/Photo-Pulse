@@ -122,7 +122,7 @@ function Home() {
                     className="hidden"
                     id="vgifUpload"
                     data-max-size="5120"
-                    accpet=".gif"
+                    accept=".gif"
                   />
                   <BsFiletypeGif />
                   <span>Gif</span>

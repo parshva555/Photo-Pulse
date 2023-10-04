@@ -188,7 +188,7 @@ const PostCard = ({ post, user, deletePost, likePost }) => {
           {post?.likes?.includes(user?._id) ? (
             <BiSolidLike size={20} color="blue" />
           ) : (
-            <BiLike suize={20} />
+            <BiLike size={20} />
           )}
           {post?.likes?.length} Likes
         </p>
@@ -202,7 +202,7 @@ const PostCard = ({ post, user, deletePost, likePost }) => {
           <BiComment size={20} />
           {post?.comments?.length} Comments
         </p>
-        {user?._id === post?.userId?._id && (
+        {/* {user?._id === post?.userId?._id && (
           <div
             className="flex gap-1 items-center text-base text-ascent-1 cursor-pointer"
             onClick={() => deletePost(post?._id)}
@@ -210,8 +210,8 @@ const PostCard = ({ post, user, deletePost, likePost }) => {
             <MdOutlineDeleteOutline size={20} />
             <span>Delete</span>
           </div>
-        )}
-      </div>
+        )} */}
+      </div>  
       {/* Comments */}
       {showComments === post?._id && (
         <div className="w-full mt-4 border-t border-[#44444465] pt-4">
