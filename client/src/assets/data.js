@@ -1,8 +1,9 @@
 export const user = {
-    _id: "64df3c064180b81adfe41d4b",
+    _id: "64df3c064180b81adfe41d4b11",
     firstName: "Parshva",
     lastName: "Dani",
-    email: "codewave@gmail.com",
+    email: "parshva@gmail.com",
+    profession:"Full Stack Devloper",
 
     friends: [
       {
@@ -388,14 +389,14 @@ export const user = {
       _id: "64df41304a4c0d47b5369f0d",
       userId: {
         _id: "64df3aec4180b81adfe41d32",
-        firstName: "Akwasi",
-        lastName: "Asante",
+        firstName: "Micheal",
+        lastName: "Bruce",
         profileUrl:
           "https://res.cloudinary.com/djs3wu5bg/image/upload/v1683874470/cld-sample.jpg",
       },
       postId: "64df3ef86c2bd953c7b43193",
       comment: "This dogs are too serious!",
-      from: "Akwasi Asante",
+      from: "Code Era",
       likes: ["64df39704180b81adfe41d0b"],
       replies: [
         {
