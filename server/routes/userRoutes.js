@@ -2,7 +2,7 @@ import express from "express"
 import path from "path"
 
 
-import { acceptRequest, changePassword, friendRequest, getFriendRequest, getUser, requestPasswordReset, resetPassword, updateUser, verifyEmail} from '../controllers/userController.js';
+import { acceptRequest, changePassword, friendRequest, getFriendRequest, getUser, profileViews, requestPasswordReset, resetPassword, suggestedFriends, updateUser, verifyEmail} from '../controllers/userController.js';
 import userAuth from "../middleware/authMiddleware.js";
 
 const router = express.Router();
@@ -22,7 +22,10 @@ router.post("/friend-request",userAuth,friendRequest)
 router.post("/get-friend-request",userAuth,getFriendRequest)
 //accept/deny
 router.post("/accept-request",userAuth,acceptRequest)
-
+// view profile
+router.post("/profile-view",userAuth,profileViews)
+//suggested friends
+router.post("/suggested-friends",userAuth,suggestedFriends)
 
 
 router.get("/verified", (req, res) => {
