@@ -63,6 +63,7 @@ const Login = () => {
               placeholder="Password"
               label="Password"
               type="password"
+              // hook
               register={register("password", {
                 required: "Password is required",
               })}
