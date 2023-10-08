@@ -10,6 +10,7 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 import { ImCamera } from "react-icons/im";
 import { SetTheme } from "../redux/theme";
 import { Logout } from "../redux/userSlice";
+import { fetchPosts } from "../utils";
 const isMobile = window.innerWidth <= 768;
 
 const TopBar = () => {
@@ -30,7 +31,9 @@ const TopBar = () => {
     // redux 
     dispatch(SetTheme(themeValue));
   };
-  const handleSearch = async (data) => {};
+  const handleSearch = async (data) => {
+    await fetchPosts(user?.token, dispatch, "", data);
+  };
 
   return (
     <div className="topbar  w-full flex items-center  justify-between py-3 md:py-6 px-4 bg-primary">
