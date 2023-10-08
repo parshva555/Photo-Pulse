@@ -108,7 +108,7 @@ return(
     )}
     <div className="flex items-end justify-end pb-2">
         {loading ? (<Loading/>) : (<CustomButton title="Submit"
-        type="submit" containerStyles="bg-[#0444a4] text-white py-1 px-3 rounded-full font-semibold text-sm"/>)}
+        type="submit" containerStyles="bg-[#e09200] text-white py-1 px-3 rounded-full font-semibold text-sm"/>)}
     </div>
      </form>
 )
