@@ -254,14 +254,14 @@ await fetchPost();
 
                 <div className="flex gap-1">
                   <CustomButton
-                  title="Accept"
-                  containerStyles='bg-[#e09200] text-xs text-white px-1.5 py-1 rounded-full'
-                  onClick={() => acceptFriendRequest(_id, "Accepted")}
+                        title='Accept'
+                        onCLick={()=> acceptFriendRequest(_id,"Accepted")}  
+                        containerStyles='bg-[#e09200] text-xs text-white px-1.5 py-1 rounded-full'
                   />
                    <CustomButton
-                  title="Deny"
-                  onClick={() => acceptFriendRequest(_id, "Denied")}
-                  containerStyles='border border-[#666] text-xs text-ascent-1 px-1.5 py-1 rounded-full'
+                                          title='Deny'
+                                          onCLick={()=> acceptFriendRequest(_id,"Denied")}
+                                          containerStyles='border border-[#666] text-xs text-ascent-1 px-1.5 py-1 rounded-full'
                   />
                 </div>
               </div>
